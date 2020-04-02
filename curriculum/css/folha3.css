@@ -1,0 +1,73 @@
+.sessao img{width: 50px;}
+a{color: #5B595A;}
+
+/* ================HEADER================= */
+body{background: #FFF;}
+.header{max-width: 980px;margin: 0 auto; display: flex; flex-direction: row-reverse;box-sizing: border-box;
+  background: linear-gradient(90deg, rgba(0,1,247,1) 0%, rgba(29,109,253,1) 85%, rgba(98,182,250,1) 100%);
+  padding: 20px; margin-bottom: 80px;color: #FFF;
+}
+
+.header__foto{flex: 1;}
+.header__foto img{position: relative; top: 60px;  border: 8px solid #1d6dfd ; width: 210px;}
+.header__descricao{padding-left: 20px; align-self: center;}
+.header__descricao h1{font-size: 3em;font-weight: 500;}
+.lhorizontal{height: 2px; background-image: linear-gradient(90deg, #FFF, #00F); width: 95%;}
+.header__descricao{flex: 3; clear: both;}
+.header__descricao h3{font-size: 1.5em;font-weight: 700;padding: 5px 0;}
+
+@media (max-width:635px) {
+  .header__foto img{position: static; margin-bottom: 15px;}
+  .header{flex-direction: column; align-items: center;}
+}
+@media (max-width:375px) {
+  .header__descricao h1, .header__descricao h3{text-align: center;}
+  .header__descricao h1{font-size: 2.5em;font-weight: bolder;}
+  .header__botoesStyle{display: grid;justify-content: center;}
+  .header__botoesStyle button{width: 180px;}
+  .header__descricao h3{font-size: 1.25;}
+  .header__botoesStyle button + button{margin-top: 10px;}
+}
+@media (max-width:275px) {
+  .header__descricao h1{font-size: 1.5em;}
+  .header__botoesStyle button{width: 140px;}
+  .header__foto img{width: 160px;}
+}
+
+/* ================SECTION================= */
+.sessao{max-width: 980px;margin: 0 auto; display: flex; flex-direction: row-reverse; box-sizing: border-box;padding: 20px;}
+.sessao h1::after{content: ''; width: 100%; height: 8px; background: linear-gradient(90deg, rgba(26,17,194,1) 0%, rgba(0,5,255,1) 20%, rgba(0,212,255,1) 100%);display: block;margin: 10px 0;}
+.sessao h1{font-weight: bolder;font-size: 1.25em;margin-top: 60px;}
+.sessao__esquerda{flex: 8;}
+.sessao__esquerda__cursos, .sessao__esquerda__experiencias{margin-bottom: 15px;}
+.sessao__esquerda h2{font-size: 1.25em; padding-bottom: 10px;}
+.sessao__esquerda h3{font-size: 1.25em;}
+.sessao__esquerda dd{line-height: 1.25em;}
+.meio{flex: 1;}
+
+.sessao__direita{flex: 8;}
+
+
+/* ================POSTFÓLIO================= */
+.sessao__direita__portifólio__item{max-width: 300px;overflow-x: scroll;display: flex;}
+.sessao__direita__portifólio__item a{padding: 10px;}
+
+
+/* ================MEDIAS QUERYS================= */
+@media (max-width:675px) {
+  .sessao__direita__portifólio__item{max-width: 600px;}
+  .sessao{flex-direction: column-reverse;}
+  .whats a, .email p, footer p{word-break: break-all;}
+  .sessao h1{margin-bottom: 5px;}
+}
+
+/* ====================ANIMAÇÕES================= */
+.js .header__foto img{
+  transform: translate3d(0, 0, 0); transition: 1.5s;
+}
+.js .header__foto img.ativo{transform: translate3d(0, -300px, 0);}
+
+.js .js__scroll__esquerda{opacity: 0; transform: translate3d(0px, 50px, 0); transition: 1s;}
+.js .js__scroll__esquerda.ativo, .js .js__scroll__direita.ativo{opacity: 1; transform: translate3d(0,0,0);}
+
+.js .js__scroll__direita{opacity: 0; transform: translate3d(0, 50px, 0); transition: .4s;}

@@ -1,0 +1,68 @@
+/* STYLES GERAIS */
+img{width: 100%;}
+input::placeholder{color: rgba((0), 0, 0, .2);}
+input.erro{border-color: #F00;}
+input.valido{border-color: #2e7d32  ;}
+input[name="titular_cartao"]{text-transform: uppercase;}
+.erro-text{display: none;font-family: 'IBM Plex Mono';font-size: .875em;color: #F00;}
+.erro-text.ativar{display: block;}
+
+
+
+
+/* FORUMLÁRIO + CARD */
+.formulario{max-width: 800px; margin: 0 auto;padding: 20px;}
+.formulario__cartao{display: grid;grid-template: "dadosCartao cartao" / 1fr 300px;align-items: center;box-sizing: border-box;}
+
+.card { width: 256px;height: 160px;margin-left: 30px;position: relative;border: none; }
+.formulario__cartao__esquerda{width: 300px;}
+.cadastro__cartao__frente, .cadastro__cartao__verso{
+  width: 256px;
+  height: 160px; 
+  border-radius: 10px;
+  color: #FFF;
+  box-shadow: 3px 3px 7px #000;
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.00, #33691e), color-stop(1.0, #8bc34a));
+  position: absolute;
+  clear: both;
+}
+
+.cadastro__cartao__verso{position: absolute;display: grid;align-items: center;transition: transform .5s; transform-style: preserve-3d;}
+.cadastro__cartao__frente {
+  /* font-size: .875em; */
+  display: grid;
+  grid-template: "logo logo""numero_cartao numero_cartao""nome_cartao data_vencimento";
+  padding: 10px;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+}
+
+.logo_cartao{width: 70px;}
+.numero_cartao{grid-area: numero_cartao;font-size: 1.5em;}
+.nome_cartao{grid-area: nome_cartao;text-transform: uppercase;margin-right: 15px;overflow: hidden; width: 180px;}
+.data_vencimento{grid-area: data_vencimento;}
+.cod_cartao {width: 100%;height: 40px; background: #000; padding-left: 15px;}
+.cod_cartao p{text-align: end;line-height: 40px;transform: scaleX(-1);}
+
+@media (max-width:600px) {
+  .formulario__cartao{grid-template: "dadosCartao" "cartao"}
+  .formulario__cartao__esquerda{grid-area: dadosCartao;width: 100%;}
+  .formulario__cartao__esquerda div:nth-child(3){display: grid;grid-template: "vencimento codigo";}
+  .formulario__cartao__direita{grid-area: cartao; align-items: center;}
+}
+@media (max-width:330px) {
+  .card { width: 192px;height: 120px;margin-left: 0px;}
+  .cadastro__cartao__frente, .cadastro__cartao__verso{ width: 192px;height: 120px;margin-left: 0px;font-size: .8em;}
+  .logo_cartao{width: 50px;}
+}
+
+
+
+
+/* ============ANIMAÇÃO========== */
+.cadastro__cartao__frente.flip {
+  transform: rotateY(-360deg);
+}
+.cadastro__cartao__verso.flip{
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="img/ml.png">
+<title>Tela Cadastro ML</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+
+</header>
+
+
+
+<section class="formulario">
+  
+  <h1>Cadastro</h1><br>
+  <form action="" name="f1">
+
+    <h2>Dados Pessoais</h2>
+    <div class="formulario__pessoal">
+      <div class="form-row ">
+        <div class="form-group col-md-4">
+          <label for="nome">Nome *</label>
+          <input type="text" class="form-control" name="nome" id="nome" required>
+        </div>
+        <div class="form-group col-md-8">
+          <label for="sobrenome">Sobrenome *</label>
+          <input type="text" class="form-control" name="sobrenome" id="sobrenome" required>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="inputAddress">Email *</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="email@email.com" onblur="validacaoEmail(f1.email)"  maxlength="60" size='65'><br><span id="msgemail"></span>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="cpf">CPF *</label>
+          <input type="text" class="form-control form" name="cpf" id="cpf" required>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="rg">RG *</label>
+          <input type="text" class="form-control form" name="rg" id="rg" required>
+        </div>
+      </div>
+    </div>
+
+    <h2>Contato</h2>
+    <div class="formulario__contato">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="fone">Fone</label>
+          <input type="text" class="form-control form" name="fone" id="fone">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="celular1">Celular 1 *</label>
+          <input type="text" class="form-control form" name="celular1" id="celular1">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="celular2">Celular 2 *</label>
+          <input type="text" class="form-control form" name="celular2" id="celular2">
+        </div>
+      </div>
+    
+    <h2>Endereço</h2>
+    <div class="formulario__contato">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="fone">CEP *</label>
+          <input type="text" class="form-control " name="cep" id="cep" required>
+          <!-- <input type="submit" value="Buscar" class="btn btn-success" style="margin:5px 0 10px 0"> -->
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="fone">Endereço *</label>
+          <input type="text" class="form-control " name="endereco" id="endereco" required>
+        </div>
+        <div class="form-group col-md-1">
+          <label for="numero_casa">Nº *</label>
+          <input type="text" class="form-control " name="numero_casa" id="numero_casa" required>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="bairro">Bairro *</label>
+          <input type="text" class="form-control " name="bairro" id="bairro" required>
+        </div>
+    
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="cidade">Cidade *</label>
+          <input type="text" class="form-control " name="cidade" id="cidade" required>
+        </div>
+        <div class="form-group col-md-1">
+          <label for="uf">UF *</label>
+          <input type="text" class="form-control " name="estado" id="estado" required>
+        </div>
+        
+      </div>
+
+      <h2>Cartão</h2>
+      <div class="formulario__cartao">
+       
+        <div class="formulario__cartao__esquerda">
+          <div class="form-group">
+            <label for="numero_cartao">Numero do cartão *</label>
+            <input type="text" class="form-control form" name="numero_cartao" id="numero_cartao" placeholder="0000 0000 0000 0000">
+          </div>
+          <div class="form-group">
+            <label for="titular_cartao">Titular do cartao *</label>
+            <input type="text" class="form-control form" name="titular_cartao" id="titular_cartao" placeholder="" maxlength="19">
+          </div>
+          <div class="form-row ">
+            <div class="form-group col-md-4">
+              <label for="venc">Venc</label>
+              <input type="text" class="form-control form" name="venc" id="venc">
+            </div>
+            
+            <div class="form-group col-md-4">
+              <label for="cod">Cód</label>
+              <input type="text" class="form-control form" name="cod" id="cod">
+            </div>
+          </div>
+        </div>
+       
+        <div class="card formulario__cartao__direita">
+          <div class="cadastro__cartao__verso">
+            <div class="cod_cartao"><p>256</p></div>
+          </div>
+        
+          <div class="cadastro__cartao__frente flip">
+            <div class="logo_cartao"><img src="img/logo_cartao.png" alt=""></div>
+            <p class="numero_cartao">**** **** **** ****</p>
+            <!-- <div class="numero_cartao">**** **** **** ****</div> -->
+            <div class="nome_cartao"><p>nome e sobrenome</p></div>
+            <div class="data_vencimento">21/10</div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <input type="submit" value="Salvar" class="btn btn-success">
+  </form>
+</section>
+
+ <script src="js/jquery_.3.4.1.js"></script>
+<script src="js/jquery.mask.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+/* ============HEADER============= */
+.header, .sessao, footer{max-width: 980px;margin: 0 auto;display: grid;margin-top: 10px; border: 2px solid #000;background: #FFF;}
+
+.header {grid-template: "foto conteudo"/ 1fr 3fr; box-sizing: border-box; padding: 20px; min-height: 250px;align-items: center;}
+.header__foto img{max-width: 180px; border: 5px solid #90C; border-radius: 50%;}
+.header__descricao{padding: 10px;}
+.header__descricao h1{font-size: 3em;color: #90C; font-weight: 500;}
+.lhorizontal{height: 2px; background-image: linear-gradient(90deg, #90C, #FFF); width: 95%;}
+.header__descricao h3{font-size: 1.5em;font-weight: 700; color: #5B595A; padding: 5px 0;}
+
+
+@media (max-width:565px) {
+	.header__descricao h1{font-size: 2em;}
+	.header__descricao h3{font-size: 1.25em;padding-bottom: 1px;}
+	.header__botoesStyle button {min-width: 70px;margin-top: 10px;}
+}
+@media (max-width:485px) {
+	.header {grid-template: "foto""conteudo" / 100%;}
+	.header__foto, .header__descricao{width:auto;text-align: center;}
+}
+
+
+/* ================SECTION================== */
+.sessao{grid-template: "esquerda meio direita"/ 3fr 10px minmax(100px, 3fr);box-sizing: border-box; padding: 20px;}
+
+
+/* ============SECTION-ESQUERDA============= */
+.sessao__esquerda{padding-right: 10px;}
+.sessao__esquerda h1, .sessao__direita h1{font-size: 1.25em; color: #63B2D0;font-weight: 600;margin-bottom: 15px;}
+.sessao__esquerda__cursos, .sessao__esquerda__experiencias{margin-bottom: 25px;}
+.sessao__esquerda__cursos, .sessao__esquerda__experiencias{display: grid;grid-template: "ano descricao" / 50px auto;}
+.sessao__esquerda__cursos h2, .sessao__esquerda__experiencias h2{display: inline-flex;}
+
+
+.sessao__esquerda__cursos h2::after, .sessao__esquerda__experiencias h2::after{content: '';display: inline-block;width: 3px;height: 85px;background: #AAA;margin-left: 5px;}
+
+
+/* =================SECTION-MEIO=================== */
+.meio{width: 3px;height: auto;background: #AAA;}
+
+
+/* ============SECTION-DIREITA============= */
+.sessao__direita{padding-left: 10px;}
+.sessao__direita__habilidades__item div{border-radius: 50%;}
+
+
+/* ==================PORTFOLIO==================== */
+.sessao__direita__portifólio__item{max-width: 400px;overflow-x: scroll;display: flex;}
+
+
+/* ===========MEDIAS QUERYS================= */
+@media (max-width:700px) {
+	.sessao__esquerda__cursos h2::after, .sessao__esquerda__experiencias h2::after{height: 115px;}
+	.whats a, .email p{word-break: break-all;}
+}
+.sessao__direita__portifólio__item img{padding: 15px;}
+@media (max-width:500px) {
+	*{word-break: break-all;}
+	.sessao__direita__portifólio__item{max-width: 250px;}
+	.meio{width: 0;height: 0;background: #FFF;}
+	.sessao__esquerda__cursos h2::after, .sessao__esquerda__experiencias h2::after{height: 85px;}
+	.sessao{grid-template: "esquerda direita"/ auto auto;}
+}
+
+@media (max-width:315px) {
+	.sessao__direita__habilidades h3{font-size: .9em; width: 80px;}
+	.sessao__direita__habilidades__item div{width: 13px; height: 13px;}
+	.sessao__direita__portifólio__item{max-width: 190px;}
+}
+@media (max-width:315px) {
+	.header__foto img{max-width: 100px;}
+}
+@media (max-width:230px) {
+	.sessao__direita__habilidades h3{font-size: .825em; width: 60px;}
+	.sessao__direita__habilidades__item div{width: 10px; height: 10px;}
+	.sessao__direita__portifólio__item{max-width: 120px;}
+}
+
+
+/* =================ANIMAÇÂO================== */
+
+.js .js__scroll__esquerda{opacity: 0; transform: translate3d(-50px, 0, 0); transition: 1s;}
+.js .js__scroll__esquerda.ativo, .js .js__scroll__direita.ativo{opacity: 1; transform: translate3d(0,0,0);}
+
+.js .js__scroll__direita{opacity: 0; transform: translate3d(50px, 0, 0); transition: .4s;}

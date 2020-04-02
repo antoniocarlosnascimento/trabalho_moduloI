@@ -1,0 +1,171 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {background: #323136;font-family: 'Roboto', sans-serif;}
+a{text-decoration: none;color: #000;}
+
+.sessao__esquerda__cursos h2, .sessao__esquerda__cursos dt,
+.sessao__esquerda__experiencias h2, .sessao__esquerda__experiencias dt{font-weight: bold;color: #5B595A;}
+.sessao__esquerda__cursos dd{margin-top: 5px;}
+.sessao__esquerda__cursos h3, .sessao__esquerda__experiencias h3{color: #AAA; font-weight: bold;}
+
+
+.sessao__direita__habilidades, .sessao__direita__contato, .sessao__direita__portifólio{margin: 25px 0 25px 0 ;}
+.sessao__direita__habilidades__item{display: flex; margin-bottom: 10px;}
+.sessao__direita__habilidades h3{font-weight: bold;margin-right: 10px; width: 120px;}
+.sessao__direita__habilidades__item div{width: 15px; height: 15px;border: 1px solid #AAA;}
+.sessao__direita__habilidades__item div + div{margin-left: 5px;}
+.corel div{background: #00F;}
+.photoshop div:nth-child(n + 1):nth-child(-n + 4) {	background: #F00;}
+.illustrator div:nth-child(n + 1):nth-child(-n + 3) {	background: #F00;}
+.html div:nth-child(n + 1):nth-child(-n + 5), 
+.css div:nth-child(n + 1):nth-child(-n + 5){background: #0F0;}
+.javascript div:nth-child(n + 1):nth-child(-n + 4), .bootstrap div:nth-child(n + 1):nth-child(-n + 4){background: yellow;}
+.php div{background: #00F;}
+.mysql div:nth-child(n + 1):nth-child(-n + 5){background: #0F0;}
+
+
+.sessao__direita__sobre p{text-indent: 1em;text-align: justify; line-height: 1.25em;}
+
+
+.sessao__direita__contato__item{display: flex;align-items: center;margin-bottom: 15px;}
+.sessao__direita__contato__item img, .sessao__direita__portifólio__item img{width: 50px;}
+.sessao__direita__contato__item div{padding-left: 15px;}
+.whats a, .email p{font-size: .9em;}
+
+
+.header__botoesStyle button{padding: 5px;border-radius: 10px;font-size: 1em;padding: 10px;color: #FFF;min-width: 100px;cursor: pointer;}
+.header__botoesStyle button:nth-child(1){border:2px solid #7D29CC; background: #90C;}
+.header__botoesStyle button:nth-child(2){border:2px solid #F00; background: #d50000;}
+.header__botoesStyle button:nth-child(3){border:2px solid #006; background: #00F;}
+
+
+footer p{text-align: center;padding: 10px;}
